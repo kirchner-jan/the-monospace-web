@@ -1,7 +1,7 @@
 ---
 title: The Monospace Web
 subtitle: A minimalist design exploration
-author: Oskar Wickström
+author: Jan Kirchner
 author-url: "https://wickstrom.tech"
 date: 2024-08-26
 lang: en
@@ -9,218 +9,544 @@ toc-title: Contents
 version: v0.1.1
 ---
 
-## Introduction
+<hr>
 
-Monospace fonts are dear to many of us. 
-Some find them more readable, consistent, and beautiful, than their proportional alternatives.
-Maybe we're just brainwashed from spending years in terminals?
-Or are we hopelessly nostalgic?
-I'm not sure.
-But I like them, and that's why I started experimenting with all-monospace Web.
+[This week in fashion](./posts/universalprior/this-week-in-fashion.md)
 
-On this page, I use a monospace grid to align text and draw diagrams.
-It's generated from a simple Markdown document (using Pandoc), and the CSS and a tiny bit of Javascript renders it on the grid.
-The page is responsive, shrinking in character-sized steps.
-Standard elements should _just work_, at least that's the goal.
-It's semantic HTML, rendered as if we were back in the 70s.
+TL;DR: A holiday obsession turns into a deep meditation on all things pretty. Albatrosses and reward \*models\* included. Also, check out…
 
-All right, but is this even a good idea?
-It's a technical and creative challenge and I like the aestethic.
-If you'd like to use it, feel free to fork or copy the bits you need, respecting the license.
-I might update it over time with improvements and support for more standard elements.
-
-## The Basics
-
-This document uses a few extra classes here and there, but mostly it's just markup.
-This, for instance, is a regular paragraph.
-
-Look at this horizontal break:
+Jan 22, 2023 • Jan Hendrik Kirchner
 
 <hr>
 
-Lovely. We can hide stuff in the `<details`> element:
+Simulator Musings
 
-<details>
-<summary>A short summary of the contents</summary>
-<p>Hidden gems.</p>
-</details>
+TL;DR: a seminar series on simulator theory; a toy model, the semiotic coin flip, unpacks the strange physics of language models a tiny bit.
 
-## Lists
+Jan 3, 2023 • Jan Hendrik Kirchner
 
-This is a plain old bulleted list:
+<hr>
 
-* Banana
-* Paper boat
-* Cucumber
-* Rocket
+### December 2022
 
-Ordered lists look pretty much as you'd expect:
+TSPSIs and How I Write
 
-1. Goals
-1. Motivations
-    1. Intrinsic
-    1. Extrinsic
-1. Second-order effects
+TL;DR: Writing about writing and having written, and self-referentiality. Complementary musings on AI.
 
-It's nice to visualize trees.
-This is a regular unordered list with a `tree` class:
+Dec 27, 2022 • Jan Hendrik Kirchner
 
-<ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
+<hr>
 
-* usr                               
-    * local                         
-    * share                         
-    * libexec                       
-    * include                       
-    * sbin                          
-    * src                           
-    * lib64                         
-    * lib                           
-    * bin                           
-    * games                         
-        * solitaire
-        * snake
-        * tic-tac-toe
-    * media                         
-* media                             
-* run                               
-* tmp                               
+### November 2022
 
-</li></ul>
+<hr>
 
-## Tables
+Introduction to Hebbian Natural Abstractions
 
-We can use regular tables that automatically adjust to the monospace grid.
-They're responsive. 
+A neuroscientific-perspective on translating concepts between world-models as a way of solving value-learning.
 
-<table>
-<thead>
-  <tr>
-    <th class="width-min">Name</th>
-    <th class="width-auto">Dimensions</th>
-    <th class="width-min">Position</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Boboli Obelisk</td>
-    <td>1.41m &times; 1.41m &times; 4.87m</td>
-    <td>43°45'50.78"N 11°15'3.34"E</td>
-  </tr>
-  <tr>
-    <td>Pyramid of Khafre</td>
-    <td>215.25m &times; 215.25m &times; 136.4m</td>
-    <td>29°58'34"N 31°07'51"E</td>
-  </tr>
-</tbody>
-</table>
+Nov 21, 2022 • Jan Hendrik Kirchner and Samuel Nellessen
 
-Note that only one column is allowed to grow.
+<hr>
 
-## Forms
+### September 2022
 
-Here are some buttons:
+<hr>
 
-<nav>
-    <button>Reset</button>
-    <button>Save</button>
-</nav>
+The Inter-Agent Facet of AI Alignment
 
-And inputs:
+TL;DR: Guest post by Michael Oesterle on coordination problems (and more) between advanced artificial agents.
 
-<form class="grid">
-<label>First name <input type="text" placeholder="Placeholder..." /></label>
-<label>Last name <input type="text" placeholder="Text goes here..." /></label>
-<label>Age <input type="text" value="30" /></label>
-</form>
+Sep 19, 2022 • Jan Hendrik Kirchner and Michael Oesterle
 
-## Grids
+### July 2022
 
-Add the `grid` class to a container to divide up the horizontal space evenly for the cells.
-Note that it maintains the monospace, so the total width might not be 100%.
-Here are six grids with increasing cell count:
+Via productiva. Audio version.
 
-<div class="grid"><input readonly value="1" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /><input readonly value="5" /></div>
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3" /><input readonly value="4" /><input readonly value="5" /><input readonly value="6" /></div>
+TL;DR: Introspection on how I do things and which rules and heuristics help me to be productive. Framed as Taleb's via negativa advice. Weaves in a bit…
 
-If we want one cell to fill the remainder, we set `flex-grow: 1;` for that particular cell.
+Jul 24, 2022 • Jan Hendrik Kirchner
 
-<div class="grid"><input readonly value="1" /><input readonly value="2" /><input readonly value="3!" style="flex-grow: 1;" /><input readonly value="4" /><input readonly value="5" /><input readonly value="6" /></div>
+<hr>
 
-## ASCII Drawings
+Hello DALL-E!
 
-We can draw in `<pre>` tags using [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_characters):
+TL;DR: I let my friend Ava (who actually knows a thing or two about art!) experiment with DALL-E 2 for a bit. She allowed me to share her reflections…
 
-```
-╭─────────────────╮
-│ MONOSPACE ROCKS │
-╰─────────────────╯
-```
+Jul 17, 2022 • Jan Hendrik Kirchner and Ava Kiai
 
-To have it stand out a bit more, we can wrap it in a `<figure>` tag, and why not also add a `<figcaption>`.
+<hr>
 
-<figure>
-<pre>
-┌───────┐ ┌───────┐ ┌───────┐
-│Actor 1│ │Actor 2│ │Actor 3│
-└───┬───┘ └───┬───┘ └───┬───┘
-    │         │         │    
-    │         │  msg 1  │    
-    │         │────────►│    
-    │         │         │    
-    │  msg 2  │         │    
-    │────────►│         │    
-┌───┴───┐ ┌───┴───┐ ┌───┴───┐
-│Actor 1│ │Actor 2│ │Actor 3│
-└───────┘ └───────┘ └───────┘</pre>
-<figcaption>Example: Message passing.</figcaption>
-</figure>
+A quick one while he's away
 
-Let's go wild and draw a chart!
+TL;DR: deep reflections on names and identity, life-changing decisions, and mental renovations. And all of that in ~500 words!
 
-<figure><pre>
-                      Things I Have
-                                              
-    │                                     ████ Usable
-15  │
-    │                                     ░░░░ Broken
-    │
-12  │             ░            
-    │             ░            
-    │   ░         ░              
- 9  │   ░         ░              
-    │   ░         ░              
-    │   ░         ░                    ░
- 6  │   █         ░         ░          ░
-    │   █         ░         ░          ░
-    │   █         ░         █          ░
- 3  │   █         █         █          ░
-    │   █         █         █          ░
-    │   █         █         █          ░
- 0  └───▀─────────▀─────────▀──────────▀─────────────
-      Socks     Jeans     Shirts   USB Drives
-</pre></figure>
+Jul 3, 2022 • Jan Hendrik Kirchner
 
-## Media
+<hr>
 
-Media objects are supported, like images and video:
+Inferring utility functions from locally non-transitive preferences. Audio version.
 
-![A room in an old French castle (2024)](castle.jpg)
+TL;DR: Fanboying JvN, then a nuts-and-bolts description of the von-Neumann-Morgenstern theorem. A connection to reward modeling, some simulations, and…
 
-![[The Center of the Web (1914), Wikimedia](https://en.wikisource.org/wiki/Page:The_Center_of_the_Web_(1914).webm/11)](https://upload.wikimedia.org/wikipedia/commons/e/e0/The_Center_of_the_Web_%281914%29.webm)
+Jul 3, 2022 • Jan Hendrik Kirchner
 
-They extend to the width of the page, and add appropriate padding in the bottom to maintain the monospace grid.
+<hr>
 
-## Discussion
+### June 2022
 
-That's it for now.
-I've very much enjoyed making this, pushing my CSS chops and having a lot of fun with the design.
-If you like it or even decide to use it, please [let me know](https://x.com/owickstrom).
+<hr>
 
-The full source code is here: [github.com/owickstrom/the-monospace-web](https://github.com/owickstrom/the-monospace-web)
+Task Decomposition And Scientific Inquiry. Audio version.
 
-Finally, a massive shout-out to [U.S. Graphics Company](https://x.com/usgraphics) for all the inspiration.
+TL;DR: A curious asymmetry between making and criticizing, the scientific method as an approach to task decomposition, and a less-than-half-baked idea…
+
+Jun 26, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+"Brain enthusiasts" in AI Safety
+
+TL;DR: If you're a student of cognitive science or neuroscience and are wondering whether it can make sense to work in AI Safety, this guide is for you…
+
+Jun 15, 2022 • Jan Hendrik Kirchner and Samuel Nellessen
+
+<hr>
+
+Puberty as Cause X? Audio version.
+
+ TL;DR: GiveWell-esque analysis of adolescents' suffering. Life satisfaction during puberty, ITN model, developmental neuroscience of the…
+
+Jun 13, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Researching Alignment Research: Unsupervised Analysis
+
+Previously in this series: Cognitive Biases in Large Language Models, Drug addicts and deceptively aligned agents - a comparative analysis, Compute…
+
+Jun 6, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+The Unreasonable Feasibility Of Playing Chess Under The Influence. Audio version.
+
+ TL;DR: The wonderful tradition of playing chess drunk, Marr's levels of analysis, AlphaZero, and Iterated Amplification and Distillation.
+
+Jun 5, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+### May 2022
+
+<hr>
+
+The Brain That Builds Itself
+
+TL;DR: Shameless advertisement for a paper some colleagues and I wrote. But also some pretty pictures of brain development, and some first principle…
+
+May 30, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Serendipitous connections: applying explanations from AI to the brain. Audio version.
+
+ TL;DR: A small shift in perspective (Elhage et al., 2021) helps interpret the ventral stream in the biological brain as the residual stream…
+
+May 29, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Adversarial attacks and optimal control
+
+TL;DR: Inspired by Zillow's recent snafu I dig into the mathematics of adversarial attacks and recap some extreme value theory and optimal control. TW…
+
+May 22, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Belief-conditional things. Audio version.
+
+ TL;DR: A little winter story about making beliefs come true. Epistemic status: this is >90% written to amuse. Not 100% though.
+
+May 22, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+On (Not) Reading Papers. Audio version.
+
+ TL;DR: Related to "scaling academia", thoughts on how to engage with academic papers. Examining the standard response to an overwhelming…
+
+May 15, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+On Automatic Ideas. Audio version.
+
+TL;DR: As part of my "scaling academia" project, I tackle automated idea generation. Finetuned large language model, online machine learning, and…
+
+May 11, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Elementary Infra-Bayesianism
+
+TL;DR: I got nerd-sniped into working through some rather technical work in AI Safety. Here's my best guess of what is going on. Imprecise probabilities…
+
+May 8, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Slightly advanced decision theory 102: Four reasons not to be a (naive) utility maximizer. Audio version.
+
+TL;DR: Introduction to decision theory with examples from effective altruism. Resulting optimal strategies differ from "naive" utility maximisation, but…
+
+May 4, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+I'm not getting in that van.
+
+TL;DR: An EAG 2022 retrospective, but also a creative writing exercise.
+
+May 1, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+The Greedy Doctor Problem. Audio version.
+
+ TL;DR: How to reason about people who are smarter than you. A few proposals, interspersed with reinforcement learning and humorous fiction…
+
+May 1, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+### April 2022
+
+<hr>
+
+Drug addicts and deceptively aligned agents - a comparative analysis. Audio version.
+
+Apr 27, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Continental Philosophy as Undergraduate Mathematics
+
+Previously in this series: Frankfurt Declaration on the Cambridge Declaration on Consciousness. Not another declaration. Looking back, I feel bad about…
+
+Apr 25, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Frankfurt Declaration on the Cambridge Declaration on Consciousness. Audio version.
+
+ TL;DR: I admit that I have no idea what consciousness is. I communicate this in the form of a declaration.
+
+Apr 24, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Applied Mathematical Logic For The Practicing Researcher
+
+Listen now (11 min) | TL;DR: Using the language of model theory to engineer a definition of "computational model".
+
+Apr 20, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+How to build a mind - neuroscience edition. Audio version.
+
+ TL;DR: The early development of the brain, from molecular biology via dynamical systems to the theory of computation. Some speculation…
+
+Apr 17, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Pop Culture Alignment Research and Taxes
+
+TL;DR: A quick recap of all the AI progress published recently, a shortcoming of the alignment tax definition, and a dynamical systems model of AI…
+
+Apr 16, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Cognitive Biases in Large Language Models. Audio version.
+
+ TL;DR: LMs exhibit some cognitive biases. Additionally, explain how cognitive biases can come about in humans. Raising questions about how…
+
+Apr 14, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+A Brief Excursion Into Molecular Neuroscience
+
+Previously in this series: How to build a mind - neuroscience edition. The Emperor's New Ǫ̵͎͊G̶̦̉̇l̶͉͇̝̽͆̚i̷͔̓̏͌c̷̱̙̍̂͜k̷̠͍͌l̷̢̍͗̃n̷̖͇̏̆å̴̤c̵̲̼̫͑̎̆…
+
+Apr 10, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+On Scaling Academia. Audio version.
+
+ TL;DR: Current model of academia does not scale. Systematizing and quantifying might improve scalability. Most importantly, it enables…
+
+Apr 10, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+On Scaling Academia - Seeds Of Science version.
+
+TL;DR: A revised version of the "On Scaling Academia" article is now openly available at Seeds Of Science.
+
+Apr 6, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Soldiers, Scouts, and Albatrosses. Audio version.
+
+ TL;DR: Soldier and Scout as modes of thought. Soldiers "assume the conclusion", which is sometimes unreasonably effective. Search as a…
+
+Apr 3, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+### March 2022
+
+<hr>
+
+Compute Governance: The Role of Commodity Hardware
+
+TL;DR: Thoughts on whether CPUs can make a comeback and become carriers of the next wave of machine learning progress (spoiler: they probably won't…
+
+Mar 26, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+On Context And People
+
+TL;DR: Contrasting views of the research landscape, a prototype for automating scientific debate, and searching the importance of authorship. And an…
+
+Mar 19, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Via productiva
+
+Be careful whose advice you buy, but be patient with those who supply it. Advice is a form of nostalgia, dispensing it is a way of fishing the past from…
+
+Mar 6, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+### February 2022
+
+Trust-maximizing AGI
+
+TL;DR: In the context of the AI Safety camp, Karl and I developed the idea of the "trust-maximizer". This write-up makes the case for "trust" as a…
+
+Feb 25, 2022 • Jan Hendrik Kirchner and Karl von Wendt
+
+<hr>
+
+Inferring utility functions from locally non-transitive preferences
+
+TL;DR: Fanboying JvN, then a nuts-and-bolts description of the von-Neumann-Morgenstern theorem. A connection to reward modeling, some simulations, and…
+
+Feb 9, 2022 • Jan Hendrik Kirchner
+
+2<hr>
+
+### January 2022
+
+Task Decomposition And Scientific Inquiry
+
+TL;DR: A curious asymmetry between making and criticizing, the scientific method as an approach to factored cognition, and a less-than-half-baked idea…
+
+Jan 31, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+Puberty as Cause X?
+
+TL;DR: GiveWell-esque analysis of adolescents' suffering. Life satisfaction during puberty, ITN model, developmental neuroscience of the amygdala. A few…
+
+Jan 22, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+An Ominous OMEN
+
+TL;DR: A collaboration with my friend Mathieu where we finetune a language model on his YouTube persona.
+
+Jan 22, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+The Unreasonable Feasibility Of Playing Chess Under The Influence
+
+TL;DR: The wonderful tradition of playing chess drunk, Marr's levels of analysis, AlphaZero, and Iterated Amplification and Distillation.
+
+Jan 12, 2022 • Jan Hendrik Kirchner and Philipp Hummel
+
+<hr>
+
+Serendipitous connections: applying explanations from AI to the brain
+
+TL;DR: A small shift in perspective helps interpret the ventral stream in the biological brain as the residual stream from ResNets. Experimental…
+
+Jan 4, 2022 • Jan Hendrik Kirchner
+
+<hr>
+
+### December 2021
+
+<hr>
+
+Belief-conditional things - things that only exist when you believe in them
+
+TL;DR: A little winter story about making beliefs come true. Epistemic status: this is >90% written to amuse. Not 100% though.
+
+Dec 25, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+On (Not) Reading Papers
+
+TL;DR: Related to "scaling academia", thoughts on how to engage with academic papers. Examining the standard response to an overwhelming flood of new…
+
+Dec 20, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+On Automatic Ideas
+
+TL;DR: As part of my "scaling academia" project, I tackle automated idea generation. Finetuned large language model, online machine learning, and…
+
+Dec 9, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+### November 2021
+
+Slightly advanced decision theory 102: Four reasons not to be a (naive) utility maximizer
+
+TL;DR: Introduction to decision theory with examples from effective altruism. Resulting optimal strategies differ from "naive" utility maximisation, but…
+
+Nov 22, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+The Greedy Doctor Problem
+
+TL;DR: How to reason about people who are smarter than you. A few proposals, interspersed with reinforcement learning and humorous fiction. Ending on a…
+
+Nov 15, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+Chat with Anna Riedl - On Drug Addiction in AI, Language Models, and Scaling Academia
+
+TL;DR: I did an interview with Anna Riedl ( riedlanna.com ) where we talk about a lot of the things that I've written about in the last few months
+
+Nov 8, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+What are red flags for Neural Network suffering?
+
+TL;DR: What would make us worried about NN suffering? Reviewing neuroscience literature + high-level considerations produce factors that (neither…
+
+Nov 8, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+Drug addicts and deceptively aligned agents - a comparative analysis
+
+A young man, let’s call him Dave, starts consuming different kinds of illegal drugs (mostly heroin) as early as age 14, as a reaction to the divorce of…
+
+Nov 5, 2021 • Jan Hendrik Kirchner and Nadia
+
+<hr>
+
+### October 2021
+
+<hr>
+
+Frankfurt Declaration on the Cambridge Declaration on Consciousness
+
+TL;DR: I admit that I have no idea what consciousness is. I communicate this in the form of a declaration.
+
+Oct 24, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+Applied Mathematical Logic For The Practicing Researcher
+
+TL;DR: Using the language of model theory to engineer a definition of "computational model".
+
+Oct 17, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+The Tale Of Gandhi And The Devil
+
+Listen now (19 min) | TL;DR: This week here is something different - effective altruism fiction!
+
+Oct 10, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+How to build a mind - neuroscience edition
+
+TL;DR: The early development of the brain, from molecular biology via dynamical systems to the theory of computation. Some speculation about how…
+
+Oct 3, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+### September 2021
+
+Cognitive Biases in Large Language Models
+
+TL;DR: LMs exhibit some cognitive biases. Additionally, explain how cognitive biases can come about in humans. Raising questions about how universal…
+
+Sep 25, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+On Scaling Academia
+
+TL;DR: Current model of academia does not scale. Systematizing and quantifying might improve scalability. Most importantly, it enables automation.
+
+Sep 20, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+Soldiers, Scouts, and Albatrosses.
+
+TL;DR: Soldier and Scout as modes of thought. Soldiers "assume the conclusion", which is unreasonably effective. Search algorithms as synthesis of…
+
+Sep 12, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+Making of #IAN - Technical Appendix
+
+TL;DR: Preprocessing text, fine-tuning with Google TRC and deploying. Not a lot of jokes.
+
+Sep 4, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+### August 2021
+
+Making of #IAN
+
+TL;DR: I fine-tuned a large language model on my personal notes and embedded the resulting model in my everyday workflow. Personal experience, Roam…
+
+Aug 29, 2021 • Jan Hendrik Kirchner
+
+<hr>
+
+© 2024 Jan Hendrik Kirchner
